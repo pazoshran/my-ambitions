@@ -61,6 +61,7 @@ export default function Footer() {
                 { href: "/what-is-nlp", label: "מהי שיטת NLP" },
                 { href: "/schedule", label: "תאריכי סדנאות" },
                 { href: "/articles", label: "מאמרים" },
+                { href: "/stories", label: "סיפורים עם מוסר השכל" },
                 { href: "/quotes", label: "ציטוטים" },
                 { href: "/terms", label: "תנאי שימוש" },
               ].map((link) => (

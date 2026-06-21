@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
@@ -13,10 +14,13 @@ export default function ContactForm() {
     subject: "",
     message: "",
   });
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState("loading");
+
+    if (!termsAccepted) return;
 
     try {
       const res = await fetch("/api/contact", {
@@ -126,10 +130,28 @@ export default function ContactForm() {
         </div>
       )}
 
+      <div className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          id="terms"
+          required
+          checked={termsAccepted}
+          onChange={(e) => setTermsAccepted(e.target.checked)}
+          className="mt-1 w-4 h-4 accent-purple-700 shrink-0 cursor-pointer"
+        />
+        <label htmlFor="terms" className="text-sm text-gray-600 cursor-pointer leading-relaxed">
+          קראתי ואני מאשר/ת את{" "}
+          <Link href="/terms" target="_blank" className="text-purple-700 underline hover:text-purple-900 font-medium">
+            תנאי השימוש
+          </Link>{" "}
+          של האתר
+        </label>
+      </div>
+
       <button
         type="submit"
-        disabled={formState === "loading"}
-        className="w-full bg-purple-800 hover:bg-purple-700 disabled:bg-purple-300 text-white font-bold py-4 rounded-xl transition-colors text-lg"
+        disabled={formState === "loading" || !termsAccepted}
+        className="w-full bg-purple-800 hover:bg-purple-700 disabled:bg-purple-300 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-colors text-lg"
       >
         {formState === "loading" ? "שולח..." : "שלח הודעה"}
       </button>
