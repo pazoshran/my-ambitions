@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #5B2D8E;
+  --color-primary-light: #7B4DB8;
+  --color-primary-dark: #3D1E60;
+  --color-gold: #D4A853;
+  --color-gold-light: #E8C47A;
+  --color-dark: #1A1A2E;
+  --color-surface: #F8F7FF;
+  --color-muted: #6B6B8A;
+  --font-sans: "Heebo", Arial, sans-serif;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1A1A2E;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  direction: rtl;
+  text-align: right;
+}
+
+/* Smooth scrolling and better typography */
+* {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #5B2D8E;
+  border-radius: 3px;
+}
+
+/* Prose styles for article content */
+.prose-rtl p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+.prose-rtl h2, .prose-rtl h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  color: #5B2D8E;
 }
