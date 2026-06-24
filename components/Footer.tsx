@@ -82,12 +82,6 @@ export default function Footer() {
             <h3 className="text-gold font-bold text-lg mb-3">צור קשר</h3>
             <ul className="space-y-3 text-sm text-white/70">
               <li className="flex items-start gap-2">
-                <span className="text-gold mt-0.5">📞</span>
-                <a href="tel:0507378535" className="hover:text-white transition-colors">
-                  050-737-8535
-                </a>
-              </li>
-              <li className="flex items-start gap-2">
                 <span className="text-gold mt-0.5">✉️</span>
                 <a href="mailto:ednamaim@gmail.com" className="hover:text-white transition-colors">
                   ednamaim@gmail.com

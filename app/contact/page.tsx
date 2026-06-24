@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "צור קשר | מכללת אמביציות - עדנה מימון",
-  description: "צרו קשר עם עדנה מימון לפרטים על סדנאות, קורסים ואימון אישי. טלפון: 050-737-8535",
+  description: "צרו קשר עם עדנה מימון לפרטים על סדנאות, קורסים ואימון אישי — דרך WhatsApp, אימייל או טופס יצירת קשר.",
 };
 
 export default function ContactPage() {
@@ -24,16 +24,6 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-purple-900 mb-8">פרטי התקשרות</h2>
 
               <div className="space-y-6">
-                <a href="tel:0507378535" className="flex items-center gap-4 p-4 bg-purple-50 rounded-2xl hover:bg-purple-100 transition-colors group">
-                  <div className="w-12 h-12 bg-purple-800 rounded-full flex items-center justify-center text-white text-xl shrink-0 group-hover:bg-purple-700 transition-colors">
-                    📞
-                  </div>
-                  <div>
-                    <div className="text-gray-500 text-sm">טלפון</div>
-                    <div className="font-bold text-purple-900 text-lg">050-737-8535</div>
-                  </div>
-                </a>
-
                 <a href="mailto:ednamaim@gmail.com" className="flex items-center gap-4 p-4 bg-purple-50 rounded-2xl hover:bg-purple-100 transition-colors group">
                   <div className="w-12 h-12 bg-purple-800 rounded-full flex items-center justify-center text-white text-xl shrink-0 group-hover:bg-purple-700 transition-colors">
                     ✉️

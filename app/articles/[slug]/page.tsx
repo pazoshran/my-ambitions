@@ -87,7 +87,7 @@ export default async function ArticlePage({
                 <div className="font-bold text-purple-900">עדנה מימון</div>
                 <div className="text-gray-600 text-sm">מאסטרית NLP, מנחת סדנאות ומאמנת אישית</div>
                 <div className="mt-2 text-sm text-gray-500">
-                  מכללת אמביציות | 050-737-8535 | ednamaim@gmail.com
+                  מכללת אמביציות | ednamaim@gmail.com
                 </div>
               </div>
             </div>
@@ -102,10 +102,12 @@ export default async function ArticlePage({
               ← לכל המאמרים
             </Link>
             <a
-              href="tel:0507378535"
-              className="inline-flex items-center gap-2 bg-purple-800 text-white font-medium px-4 py-2 rounded-full hover:bg-purple-700 transition-colors"
+              href="https://wa.me/9720507378535"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-green-600 text-white font-medium px-4 py-2 rounded-full hover:bg-green-500 transition-colors"
             >
-              📞 צרו קשר
+              💬 WhatsApp
             </a>
           </div>
         </div>

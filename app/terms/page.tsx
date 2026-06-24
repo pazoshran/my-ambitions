@@ -73,7 +73,7 @@ export default function TermsPage() {
                 לשאלות בנוגע לתנאי השימוש ניתן לפנות אלינו:
               </p>
               <ul className="list-none space-y-2 mt-3">
-                <li>📞 טלפון: 050-737-8535</li>
+                <li>💬 WhatsApp: 050-737-8535</li>
                 <li>✉️ דוא&quot;ל: ednamaim@gmail.com</li>
                 <li>📍 כתובת: בצלאל 8, רמת גן</li>
               </ul>

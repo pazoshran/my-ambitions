@@ -131,8 +131,8 @@ export default function AboutPage() {
             <h3 className="text-2xl font-bold mb-4">רוצים לדעת יותר?</h3>
             <p className="text-white/80 mb-6">צרו קשר עכשיו ונשמח לענות על כל שאלה</p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="tel:0507378535" className="bg-yellow-400 text-purple-900 font-bold px-6 py-2 rounded-full hover:bg-yellow-300 transition-colors">
-                📞 050-737-8535
+              <a href="https://wa.me/9720507378535" target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white font-bold px-6 py-2 rounded-full hover:bg-green-500 transition-colors">
+                💬 שלחו WhatsApp
               </a>
               <Link href="/contact" className="bg-white/15 border border-white/30 text-white font-bold px-6 py-2 rounded-full hover:bg-white/25 transition-colors">
                 טופס יצירת קשר

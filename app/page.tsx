@@ -7,7 +7,6 @@ const whyUsItems = [
   { icon: "/images/27729_301.png", title: "תוצאות מיידיות", desc: "שיטות NLP מביאות שינוי בפועל — כבר ממפגש ראשון" },
   { icon: "/images/27729_300.png", title: "עבודה עם תת המודע", desc: "שינוי עמוק ומהיר ישירות במקור — לא רק בסימפטום" },
   { icon: "/images/27729_303.png", title: "כלים פרקטיים", desc: "טכניקות פשוטות ומעשיות שניתן ליישם מיד בחיים האמיתיים" },
-  { icon: "/images/27729_302.png", title: "100% תוצאות", desc: "פתרונות שעובדים. מאות בוגרים מרוצים מעידים על כך" },
   { icon: "/images/27729_311.png", title: "מסע אישי", desc: "כל אדם מקבל התייחסות אישית ותוכנית המותאמת לו" },
   { icon: "/images/27729_314.png", title: "ניסיון ומקצועיות", desc: "18+ שנות ניסיון, תעודות מהמומחים הגדולים בעולם" },
 ];
@@ -236,11 +235,8 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold mb-4">מוכן/ה להתחיל?</h2>
           <p className="text-white/80 text-lg mb-8">צרו קשר עכשיו לפרטים נוספים ולהרשמה לסדנה, קורס או אימון אישי</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:0507378535" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors">
-              📞 050-737-8535
-            </a>
             <a href="https://wa.me/9720507378535" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3 rounded-full transition-colors">
-              WhatsApp
+              💬 שלחו WhatsApp
             </a>
             <Link href="/contact" className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-8 py-3 rounded-full transition-colors">
               טופס יצירת קשר

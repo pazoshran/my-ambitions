@@ -59,11 +59,8 @@ export default function SchedulePage() {
                     <strong>המקומות מוגבלים!</strong> כדי לשריין את מקומך, צרו קשר בהקדם.
                   </p>
                   <div className="flex flex-wrap gap-3 justify-center">
-                    <a href="tel:0507378535" className="bg-purple-800 text-white font-bold px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">
-                      📞 050-737-8535
-                    </a>
                     <a href="https://wa.me/9720507378535" target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white font-bold px-6 py-2 rounded-full hover:bg-green-500 transition-colors">
-                      WhatsApp
+                      💬 שלחו WhatsApp
                     </a>
                   </div>
                 </div>

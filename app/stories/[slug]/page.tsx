@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { stories, getStoryBySlug } from "@/data/stories";
+import LeadForm from "@/components/LeadForm";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
@@ -85,25 +86,36 @@ export default async function StoryPage({
               <div>
                 <div className="font-bold text-purple-900">עדנה מימון</div>
                 <div className="text-gray-600 text-sm">מאסטרית NLP, מנחת סדנאות ומאמנת אישית</div>
-                <div className="mt-1 text-sm text-gray-500">מכללת אמביציות | 050-737-8535</div>
+                <div className="mt-1 text-sm text-gray-500">מכללת אמביציות | ednamaim@gmail.com</div>
               </div>
             </div>
           </div>
 
+          {/* Lead form */}
+          <div className="mt-12">
+            <LeadForm
+              title="רוצים לשמוע עוד? השאירו פרטים"
+              subtitle="נשמח לחזור אליכם עם פרטים על הסדנאות, הקורסים והאימון האישי."
+              source={`סיפור: ${story.title}`}
+            />
+          </div>
+
           {/* Nav */}
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap gap-4 items-center">
             <Link
               href="/stories"
               className="inline-flex items-center gap-2 bg-purple-50 text-purple-800 font-medium px-4 py-2 rounded-full hover:bg-purple-100 transition-colors"
             >
               ← לכל הסיפורים
             </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-purple-800 text-white font-medium px-4 py-2 rounded-full hover:bg-purple-700 transition-colors"
+            <a
+              href="https://wa.me/9720507378535"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-green-600 text-white font-medium px-4 py-2 rounded-full hover:bg-green-500 transition-colors"
             >
-              צרו קשר
-            </Link>
+              💬 WhatsApp
+            </a>
           </div>
 
           {/* More stories */}

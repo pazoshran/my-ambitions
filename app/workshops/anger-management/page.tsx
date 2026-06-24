@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import LeadForm from "@/components/LeadForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -35,11 +35,12 @@ const curriculum = [
   "סיכום השינוי — כולל הסוד לשמירת השינוי לאורך זמן",
 ];
 
-const testimonials = [
-  { name: "חן", text: "המלצה חמה על הסדנה לשליטה בכעסים — שינוי אמיתי שרואים בשטח כבר אחרי המפגש הראשון." },
-  { name: "שאולי", text: "אילו ידעתי שזה מה שאקבל, הייתי נרשם מזמן! הסדנה סחפה אותי קדימה בתחושות נפלאות." },
-  { name: "יניב פנקר, אילת", text: "כלים פרקטיים שאני משתמש בהם כל יום. עדנה מומחית אמיתית בתחום." },
-  { name: "לימור מעודד, חולון", text: "הזוגיות שלנו השתפרה מאוד. ממליצה בחום לכל אחד שחווה קשיים ברגשות." },
+// Video testimonials from the original site (recommendations recorded as video)
+const videoTestimonials = [
+  { name: "חן", note: "המלצה חמה על הסדנה לשליטה בכעסים" },
+  { name: "שאולי", note: "בוגר הסדנה לשליטה בכעסים" },
+  { name: "יניב פנקר, אילת", note: "בוגר הסדנה לשליטה בכעסים" },
+  { name: "לימור מעודד, חולון", note: "בוגרת הסדנה לשליטה בכעסים" },
 ];
 
 export default function AngerManagementLandingPage() {
@@ -65,8 +66,8 @@ export default function AngerManagementLandingPage() {
             בשיטה הכי מהירה, מוכחת, מוצלחת, בטוחה וטבעית — ללא כדורים!
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:0507378535" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors text-lg">
-              📞 השאר/י פרטים עכשיו
+            <a href="#lead-form" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors text-lg">
+              השאר/י פרטים עכשיו
             </a>
             <a href="https://wa.me/9720507378535" target="_blank" rel="noopener noreferrer" className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-8 py-3 rounded-full transition-colors text-lg">
               💬 WhatsApp
@@ -98,12 +99,12 @@ export default function AngerManagementLandingPage() {
         <div className="max-w-xl mx-auto">
           <p className="text-white text-xl font-bold mb-4">מוכן/ה לשינוי אמיתי? השאר/י פרטים עכשיו!</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:0507378535" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors">
-              📞 050-737-8535
+            <a href="#lead-form" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors">
+              השאר/י פרטים
             </a>
-            <Link href="/contact" className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-8 py-3 rounded-full transition-colors">
-              טופס יצירת קשר
-            </Link>
+            <a href="https://wa.me/9720507378535" target="_blank" rel="noopener noreferrer" className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-8 py-3 rounded-full transition-colors">
+              💬 WhatsApp
+            </a>
           </div>
         </div>
       </section>
@@ -183,10 +184,11 @@ export default function AngerManagementLandingPage() {
           </div>
 
           <div className="bg-purple-900 text-white rounded-3xl p-8">
+            <h3 className="text-3xl font-bold text-yellow-300 mb-4">אתה לא אשם</h3>
             <p className="text-lg leading-relaxed mb-4">
               <span className="font-bold">לא, זו לא בושה לטפל בכעסים. אבל זו בושה לא לטפל בהם!</span>
               <br /><br />
-              אתה לא אשם — גדלת בצורה מסוימת, וזה יצר את הכעסים. אך אם תבחר שלא לשנות, אתה תסחב את האחריות הזאת על גבך — ועם זה, את התיסכול של הסובבים אותך ושל עצמך.
+              גדלת בצורה מסוימת, וזה יצר את הכעסים. אך אם תבחר שלא לשנות, אתה תסחב את האחריות הזאת על גבך — ועם זה, את התיסכול של הסובבים אותך ושל עצמך.
             </p>
           </div>
         </div>
@@ -195,44 +197,64 @@ export default function AngerManagementLandingPage() {
       {/* Testimonials */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-purple-900 mb-8 text-center">מה אומרים המשתתפים</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-purple-50 rounded-2xl p-6 border border-purple-100">
-                <div className="text-yellow-500 text-2xl mb-3">❝</div>
-                <p className="text-gray-700 leading-relaxed mb-4">{t.text}</p>
-                <p className="font-bold text-purple-900">— {t.name}</p>
+          <h2 className="text-2xl font-bold text-purple-900 mb-2 text-center">מה אומרים המשתתפים</h2>
+          <p className="text-center text-gray-600 mb-8">המלצות מצולמות של בוגרי הסדנה לשליטה בכעסים</p>
+
+          {/* Featured video testimonial — חן */}
+          <div className="mb-8">
+            <div className="relative rounded-2xl overflow-hidden shadow-md" style={{ paddingTop: "56.25%" }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/1dxnFxnd7zk?rel=0"
+                title="המלצה חמה של חן על הסדנה לשליטה בכעסים"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <p className="text-center text-purple-900 font-bold mt-3">המלצה חמה של חן על הסדנה לשליטה בכעסים</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {videoTestimonials.filter((t) => t.name !== "חן").map((t, i) => (
+              <div key={i} className="bg-purple-50 rounded-2xl p-6 border border-purple-100 text-center">
+                <div className="w-12 h-12 bg-purple-200 text-purple-800 rounded-full flex items-center justify-center text-xl mx-auto mb-3">
+                  🎥
+                </div>
+                <p className="font-bold text-purple-900">{t.name}</p>
+                <p className="text-gray-600 text-sm mt-1">{t.note}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-16 px-4 text-center text-white" style={{ background: "linear-gradient(135deg, #1A1A2E, #3D1E60)" }}>
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">עכשיו זה הזמן!</h2>
-          <p className="text-white/80 text-lg mb-4">
-            השאר/י פרטיך בטופס, או שלח/י WhatsApp
-            <br />
-            ותהיה/י את/ה השולט/ת במציאות שלך.
+      {/* Lead form */}
+      <section id="lead-form" className="py-16 px-4 bg-purple-50 scroll-mt-20">
+        <div className="max-w-xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-purple-900 mb-2">עכשיו זה הזמן!</h2>
+          <p className="text-center text-gray-600 mb-2">
+            השאירו פרטים ותהיו אתם השולטים במציאות שלכם.
           </p>
-          <p className="text-white/60 text-sm mb-8">המקומות מוגבלים — הסדנה מתמלאת מהר</p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:0507378535" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors">
-              📞 050-737-8535
+          <p className="text-center text-gray-500 text-sm mb-8">המקומות מוגבלים — הסדנה מתמלאת מהר</p>
+          <LeadForm
+            title="השארת פרטים לסדנת שליטה בכעסים"
+            subtitle="מלאו את הפרטים ועדנה תחזור אליכם עם כל המידע."
+            source="סדנה שליטה בכעסים"
+          />
+          <div className="mt-6 text-center">
+            <a
+              href="https://wa.me/9720507378535"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3 rounded-full transition-colors"
+            >
+              💬 או שלחו הודעה ב-WhatsApp
             </a>
-            <a href="https://wa.me/9720507378535" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3 rounded-full transition-colors">
-              💬 WhatsApp
-            </a>
-            <Link href="/contact" className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-8 py-3 rounded-full transition-colors">
-              טופס יצירת קשר
-            </Link>
           </div>
-          <div className="mt-8">
-            <Link href="/schedule" className="text-yellow-300 underline text-sm hover:text-yellow-200 transition-colors">
+          <div className="mt-6 text-center">
+            <a href="/schedule" className="text-purple-700 underline text-sm hover:text-purple-900 transition-colors">
               לתאריכי הסדנה הקרובים ←
-            </Link>
+            </a>
           </div>
         </div>
       </section>
