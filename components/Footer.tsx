@@ -62,6 +62,7 @@ export default function Footer() {
                 { href: "/schedule", label: "תאריכי סדנאות" },
                 { href: "/articles", label: "מאמרים" },
                 { href: "/stories", label: "סיפורים עם מוסר השכל" },
+                { href: "/videos", label: "סרטוני וידאו" },
                 { href: "/quotes", label: "ציטוטים" },
                 { href: "/terms", label: "תנאי שימוש" },
               ].map((link) => (

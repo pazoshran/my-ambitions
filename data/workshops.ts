@@ -23,24 +23,24 @@ export const workshops: Workshop[] = [
   },
   {
     id: "self-confidence",
-    title: "ביטחון עצמי",
+    title: "ביטחון עצמי ודימוי עצמי",
     subtitle: "כישורים לחיים עם ביטחון עצמי",
     description:
-      "סדנה של 9 מפגשים עוצמתיים. תפרוץ/י גבולות, תתבטא/י יותר בחברה, תאמין/י בעצמך ותרגיש/י שלמות עם מי שאת/ה.",
-    sessions: 9,
+      "סדנה עוצמתית להעלאת הביטחון העצמי והדימוי העצמי. תפרוץ/י גבולות, תתבטא/י יותר בחברה, תאמין/י בעצמך ותרגיש/י שלמות עם מי שאת/ה.",
+    sessions: 16,
     sessionLength: "3.5 שעות",
-    href: "/workshops",
+    href: "/workshops/self-confidence",
     icon: "✨",
   },
   {
-    id: "couple-frequency",
+    id: "couple-relationship",
     title: "התדר הזוגי",
     subtitle: "שיפור הזוגיות והתקשורת",
     description:
       "סדנה לזוגות הרוצים לחזק את הקשר, לשפר את התקשורת ולהחזיר את האהבה והתשוקה לזוגיות.",
     sessions: 6,
     sessionLength: "3.5 שעות",
-    href: "/workshops",
+    href: "/workshops/couple-relationship",
     icon: "💜",
   },
   {
@@ -51,7 +51,7 @@ export const workshops: Workshop[] = [
       "למד/י את מודלי התקשורת האפקטיבית, להבין אחרים ולהיות מובן/ת. טכניקות מיידיות לשיפור כל מערכת יחסים.",
     sessions: 6,
     sessionLength: "3.5 שעות",
-    href: "/workshops",
+    href: "/workshops/interpersonal",
     icon: "🤝",
   },
   {
@@ -60,21 +60,21 @@ export const workshops: Workshop[] = [
     subtitle: "לצאת מתקיעות ולהתקדם",
     description:
       "הסדנה לאנשים שרוצים לצאת מהנוחות, לפרוץ גבולות ולהתמודד בהצלחה עם שינויים בחיים.",
-    sessions: 6,
-    sessionLength: "3.5 שעות",
-    href: "/workshops",
+    sessions: 9,
+    sessionLength: "5 שעות",
+    href: "/workshops/coping-change",
     icon: "🚀",
   },
   {
-    id: "assertiveness",
-    title: "אסרטיביות",
-    subtitle: "לעמוד על שלך בנחישות ורוגע",
+    id: "youth-confidence",
+    title: "ביטחון עצמי לנוער",
+    subtitle: "\"אני יכול!\" — גילאי 9–14",
     description:
-      "למד/י לומר מה שאת/ה רוצה, להציב גבולות ולדאוג לצרכים שלך - מבלי לפגוע באחרים.",
-    sessions: 6,
-    sessionLength: "3.5 שעות",
-    href: "/workshops",
-    icon: "💪",
+      "סדנה לחיזוק הביטחון העצמי, ההערכה והאהבה העצמית של ילדים ונוער. שיפור מיומנויות חברתיות והתמודדות עם רגשות.",
+    sessions: 5,
+    sessionLength: "2 שעות",
+    href: "/workshops/youth-confidence",
+    icon: "🌟",
   },
 ];
 
