@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { workshops } from "@/data/workshops";
 import { testimonials } from "@/data/testimonials";
+import LeadForm from "@/components/LeadForm";
 
 const whyUsItems = [
   { icon: "/images/27729_301.png", title: "תוצאות מיידיות", desc: "שיטות NLP מביאות שינוי בפועל — כבר ממפגש ראשון" },
@@ -226,6 +227,21 @@ export default function HomePage() {
               לכל ההמלצות
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Lead form */}
+      <section className="py-16 px-4">
+        <div className="max-w-xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-purple-900 mb-2">רוצים לשמוע עוד?</h2>
+          <p className="text-center text-gray-600 mb-8">
+            השאירו פרטים ועדנה תחזור אליכם עם כל המידע על הסדנאות, הקורסים והאימון האישי.
+          </p>
+          <LeadForm
+            title="השאירו פרטים ונחזור אליכם"
+            subtitle="ללא התחייבות — פשוט נכיר ונראה איך אפשר לעזור."
+            source="דף הבית"
+          />
         </div>
       </section>
 
