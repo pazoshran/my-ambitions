@@ -45,20 +45,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <a
-                  href="https://wa.me/9720507378535"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-green-50 border border-green-200 rounded-2xl hover:bg-green-100 transition-colors group"
-                >
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white text-xl shrink-0 group-hover:bg-green-500 transition-colors">
-                    💬
-                  </div>
-                  <div>
-                    <div className="text-gray-500 text-sm">WhatsApp</div>
-                    <div className="font-bold text-green-800">שלחו הודעה עכשיו</div>
-                  </div>
-                </a>
               </div>
 
               <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-2xl p-6">

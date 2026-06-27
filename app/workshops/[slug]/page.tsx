@@ -155,16 +155,6 @@ export default async function WorkshopDetailPage({
             source={w.title}
           />
           <div className="mt-6 text-center">
-            <a
-              href="https://wa.me/9720507378535"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3 rounded-full transition-colors"
-            >
-              💬 או שלחו הודעה ב-WhatsApp
-            </a>
-          </div>
-          <div className="mt-6 text-center">
             <Link href="/workshops" className="text-purple-700 underline text-sm hover:text-purple-900 transition-colors">
               ← לכל הסדנאות
             </Link>

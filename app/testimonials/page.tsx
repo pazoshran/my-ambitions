@@ -54,8 +54,8 @@ export default function TestimonialsPage() {
           <h2 className="text-2xl font-bold text-purple-900 mb-4">רוצים גם אתם להצטרף?</h2>
           <p className="text-gray-600 mb-6">הצטרפו לאחת הסדנאות או לאימון אישי ותרגישו את השינוי בעצמכם</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://wa.me/9720507378535" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3 rounded-full transition-colors">
-              💬 שלחו WhatsApp
+            <a href="/contact" className="bg-purple-800 hover:bg-purple-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+              צרו קשר
             </a>
             <a href="/workshops" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors">
               לסדנאות

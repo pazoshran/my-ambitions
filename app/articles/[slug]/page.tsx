@@ -101,14 +101,12 @@ export default async function ArticlePage({
             >
               ← לכל המאמרים
             </Link>
-            <a
-              href="https://wa.me/9720507378535"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-600 text-white font-medium px-4 py-2 rounded-full hover:bg-green-500 transition-colors"
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-purple-800 text-white font-medium px-4 py-2 rounded-full hover:bg-purple-700 transition-colors"
             >
-              💬 WhatsApp
-            </a>
+              צרו קשר
+            </Link>
           </div>
         </div>
       </section>

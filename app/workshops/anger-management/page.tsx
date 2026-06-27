@@ -47,32 +47,38 @@ export default function AngerManagementLandingPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative py-20 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #3D1E60, #5B2D8E)" }}>
+      <section className="relative py-14 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #3D1E60, #5B2D8E)" }}>
         <div className="absolute inset-0">
           <Image src="/images/27729_306.jpg" alt="" fill className="object-cover opacity-15" />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-block bg-white/10 text-yellow-300 border border-yellow-300/30 rounded-full px-4 py-1 text-sm font-medium mb-6">
+          <div className="inline-block bg-white/10 text-yellow-300 border border-yellow-300/30 rounded-full px-4 py-1 text-sm font-medium mb-5">
             18 שנות ניסיון | מאות לקוחות מרוצים | הצלחות מדברות בעד עצמן
           </div>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
             סדנה שליטה בכעסים
             <span className="block text-yellow-300 mt-2">עם המומחית עדנה מימון</span>
           </h1>
-          <p className="text-xl text-white/85 max-w-2xl mx-auto leading-relaxed mb-3">
-            הסדנה שתלמד אותך איך להשתחרר מכעסים ולחצים באמצעות עבודה עם תת המודע
+          <p className="text-lg text-white/85 max-w-2xl mx-auto leading-relaxed mb-7">
+            הסדנה שתלמד אותך איך להשתחרר מכעסים ולחצים באמצעות עבודה עם תת המודע — בשיטה הכי מהירה, מוכחת, בטוחה וטבעית, ללא כדורים!
           </p>
-          <p className="text-white/70 mb-8">
-            בשיטה הכי מהירה, מוכחת, מוצלחת, בטוחה וטבעית — ללא כדורים!
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a href="#lead-form" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors text-lg">
-              השאר/י פרטים עכשיו
-            </a>
-            <a href="https://wa.me/9720507378535" target="_blank" rel="noopener noreferrer" className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-8 py-3 rounded-full transition-colors text-lg">
-              💬 WhatsApp
-            </a>
+
+          {/* Intro video */}
+          <div className="max-w-2xl mx-auto mb-7">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20" style={{ paddingTop: "56.25%" }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://player.vimeo.com/video/746291188?title=0&byline=0&portrait=0"
+                title="סדנה שליטה בכעסים — עדנה מימון"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
+
+          <a href="#lead-form" className="inline-block bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors text-lg">
+            השאר/י פרטים עכשיו
+          </a>
         </div>
       </section>
 
@@ -101,9 +107,6 @@ export default function AngerManagementLandingPage() {
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="#lead-form" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors">
               השאר/י פרטים
-            </a>
-            <a href="https://wa.me/9720507378535" target="_blank" rel="noopener noreferrer" className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-8 py-3 rounded-full transition-colors">
-              💬 WhatsApp
             </a>
           </div>
         </div>
@@ -241,16 +244,6 @@ export default function AngerManagementLandingPage() {
             subtitle="מלאו את הפרטים ועדנה תחזור אליכם עם כל המידע."
             source="סדנה שליטה בכעסים"
           />
-          <div className="mt-6 text-center">
-            <a
-              href="https://wa.me/9720507378535"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3 rounded-full transition-colors"
-            >
-              💬 או שלחו הודעה ב-WhatsApp
-            </a>
-          </div>
           <div className="mt-6 text-center">
             <a href="/schedule" className="text-purple-700 underline text-sm hover:text-purple-900 transition-colors">
               לתאריכי הסדנה הקרובים ←
