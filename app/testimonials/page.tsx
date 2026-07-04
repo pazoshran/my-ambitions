@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { testimonials } from "@/data/testimonials";
 import type { Metadata } from "next";
 
@@ -13,6 +14,13 @@ const typeLabels: Record<string, string> = {
   general: "כללי",
 };
 
+// WhatsApp message screenshots from participants
+const waImages = [
+  "/images/27729_335.jpg",
+  "/images/27729_268.jpg",
+  "/images/27729_208.jpg",
+];
+
 export default function TestimonialsPage() {
   return (
     <div>
@@ -23,8 +31,24 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
+      {/* WhatsApp screenshots */}
+      <section className="py-12 px-4 bg-purple-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-purple-900 text-center mb-2">הודעות שקיבלנו בוואטסאפ 💬</h2>
+          <p className="text-center text-gray-600 mb-8">הודעות אמיתיות מבוגרי הסדנאות</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {waImages.map((src) => (
+              <div key={src} className="bg-white rounded-2xl p-3 border border-purple-100 shadow-sm">
+                <Image src={src} alt="המלצה בוואטסאפ" width={720} height={1280} className="w-full h-auto rounded-xl" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-purple-900 text-center mb-8">מכתבי תודה והמלצות</h2>
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
             {testimonials.map((t, i) => (
               <div

@@ -50,8 +50,7 @@ export default function ContactPage() {
               <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-2xl p-6">
                 <h3 className="font-bold text-purple-900 mb-2">שעות פעילות</h3>
                 <div className="space-y-1 text-gray-600 text-sm">
-                  <div>ראשון – חמישי: 9:00–21:00</div>
-                  <div>שישי: 9:00–14:00</div>
+                  <div>ראשון – חמישי: 10:00–18:00</div>
                 </div>
               </div>
             </div>

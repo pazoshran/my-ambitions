@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-gold font-bold text-lg mb-3">מכללת אמביציות</h3>
             <p className="text-white/70 text-sm leading-relaxed">
-              עדנה מימון, מאסטרית NLP עם 18+ שנות ניסיון. מתמחה בשליטה בכעסים,
+              עדנה מימון, מאסטרית NLP עם 18+ שנות ניסיון. מתמחה בשליטה בכעסים והתפרצויות זעם,
               שיפור ביטחון עצמי, זוגיות ואימון אישי.
             </p>
             <div className="flex gap-3 mt-4">
@@ -63,7 +63,7 @@ export default function Footer() {
                 { href: "/articles", label: "מאמרים" },
                 { href: "/stories", label: "סיפורים עם מוסר השכל" },
                 { href: "/videos", label: "סרטוני וידאו" },
-                { href: "/quotes", label: "ציטוטים" },
+                { href: "/quotes", label: "ציטוטים, משפטי העצמה ומוטיבציה" },
                 { href: "/terms", label: "תנאי שימוש" },
               ].map((link) => (
                 <li key={link.href}>

@@ -60,7 +60,15 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-purple-900 mb-3">6. קישורים חיצוניים</h2>
+              <h2 className="text-xl font-bold text-purple-900 mb-3">6. ניוזלטר</h2>
+              <p>
+                לאחר השארת הפרטים, תקבל את הניוזלטר שלנו, הכולל טיפים לשליטה בכעסים. במידה שלא תרצה
+                להמשיך לקבל את הניוזלטר, תוכל לבטל הרשמה כבר במייל הראשון שתקבל.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-purple-900 mb-3">7. קישורים חיצוניים</h2>
               <p>
                 האתר עשוי להכיל קישורים לאתרים חיצוניים. מכללת אמביציות אינה אחראית לתוכן
                 אתרים אלה ולאמינות המידע שבהם.
@@ -68,12 +76,21 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-purple-900 mb-3">7. יצירת קשר</h2>
+              <h2 className="text-xl font-bold text-purple-900 mb-3">8. יצירת קשר</h2>
               <p>
                 לשאלות בנוגע לתנאי השימוש ניתן לפנות אלינו:
               </p>
-              <ul className="list-none space-y-2 mt-3">
-                <li>💬 WhatsApp: 050-737-8535</li>
+              <ul className="list-none space-y-3 mt-3">
+                <li>
+                  <a
+                    href="https://wa.me/9720507378535"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-5 py-2 rounded-full transition-colors text-sm"
+                  >
+                    💬 שלחו הודעה ב-WhatsApp
+                  </a>
+                </li>
                 <li>✉️ דוא&quot;ל: ednamaim@gmail.com</li>
                 <li>📍 כתובת: בצלאל 8, רמת גן</li>
               </ul>

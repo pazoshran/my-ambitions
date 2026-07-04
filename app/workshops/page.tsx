@@ -60,7 +60,7 @@ export default function WorkshopsPage() {
               { icon: "🎯", title: "תוצאות מדידות", desc: "שינוי אמיתי שרואים בשטח כבר אחרי המפגש הראשון" },
               { icon: "🧠", title: "שיטת NLP", desc: "עבודה עם תת המודע לשינוי עמוק ומהיר" },
               { icon: "👥", title: "קבוצה קטנה", desc: "קבוצות קטנות לאינטראקציה אישית ועמוקה" },
-              { icon: "📍", title: "מיקום נוח", desc: "בצלאל 8, רמת גן — ליד תחנת רכבת סבידור, חניה חינם" },
+              { icon: "📍", title: "מיקום נוח", desc: "בצלאל 8, רמת גן — ליד תחנת רכבת סבידור. חניה בכחול לבן או בשפע החניונים שבסביבה" },
               { icon: "❤️", title: "אוירה תומכת", desc: "סביבה בטוחה, חמה ואכפתית לשינוי" },
               { icon: "🔄", title: "שינוי הדרגתי", desc: "צעד אחר צעד, בקצב שלך, לתוצאות מתמשכות" },
             ].map((item) => (
@@ -78,7 +78,7 @@ export default function WorkshopsPage() {
       <section className="py-16 px-4 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-bold text-purple-900 mb-4">מעוניין/ת להירשם?</h2>
-          <p className="text-gray-600 mb-6">צרו קשר לבדיקת תאריכים, פרטים ועלות</p>
+          <p className="text-gray-600 mb-6">צרו קשר לבירור צרכים, בדיקת התאמה ותיאום ציפיות</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="bg-purple-800 hover:bg-purple-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
               צרו קשר

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
+import RevealLeadForm from "@/components/RevealLeadForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,6 +29,8 @@ const curriculum = [
   "מה יכלול השינוי — כלים פרקטיים לשינוי אמיתי",
   "איזה סוגי תודעה קיימים",
   "איך נשנה את התקשורת שלנו: בזוגיות, עם הילדים, ובכלל עם כל אחד",
+  "איך תודעת קורבנות קשורה לכעסים והתפרצויות זעם, ומה ניתן לעשות עם זה",
+  "מה לעשות כשאתה מרגיש פגוע, חסר אונים ומתוסכל מאוד שלא מקשיבים לך, לא רואים אותך, ולא מתייחסים אליך בכבוד",
   "שינוי התיכנות הקיים במוח, טיפול בטראומות עבר",
   "ריסטארט למוח — טכניקות מדויקות לניקוי רגשות מתת המודע",
   "הסוד הגדול להקשבה",
@@ -35,12 +38,11 @@ const curriculum = [
   "סיכום השינוי — כולל הסוד לשמירת השינוי לאורך זמן",
 ];
 
-// Video testimonials from the original site (recommendations recorded as video)
-const videoTestimonials = [
-  { name: "חן", note: "המלצה חמה על הסדנה לשליטה בכעסים" },
-  { name: "שאולי", note: "בוגר הסדנה לשליטה בכעסים" },
-  { name: "יניב פנקר, אילת", note: "בוגר הסדנה לשליטה בכעסים" },
-  { name: "לימור מעודד, חולון", note: "בוגרת הסדנה לשליטה בכעסים" },
+// WhatsApp message testimonials (screenshots) from the original site
+const waTestimonials = [
+  { name: "שאולי", image: "/images/27729_335.jpg" },
+  { name: "יניב פנקר, אילת", image: "/images/27729_268.jpg" },
+  { name: "לימור מעודד, חולון", image: "/images/27729_208.jpg" },
 ];
 
 export default function AngerManagementLandingPage() {
@@ -76,9 +78,12 @@ export default function AngerManagementLandingPage() {
             </div>
           </div>
 
-          <a href="#lead-form" className="inline-block bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors text-lg">
-            השאר/י פרטים עכשיו
-          </a>
+          <RevealLeadForm
+            buttonLabel="השאר/י פרטים עכשיו"
+            title="השארת פרטים לסדנת שליטה בכעסים"
+            subtitle="מלאו את הפרטים ועדנה תחזור אליכם."
+            source="סדנה שליטה בכעסים (טופס עליון)"
+          />
         </div>
       </section>
 
@@ -144,14 +149,14 @@ export default function AngerManagementLandingPage() {
       {/* What the workshop includes */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-purple-900 mb-8">מה כוללת הסדנה</h2>
+          <h2 className="text-2xl font-bold text-purple-900 mb-8">מה כוללת הסדנה — שליטה בכעסים והתפרצויות זעם</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {curriculum.map((item, i) => (
-              <div key={i} className="flex items-start gap-3 bg-purple-50 rounded-xl p-4 border border-purple-100">
-                <span className="w-6 h-6 bg-purple-200 text-purple-900 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+              <div key={i} className="flex items-start gap-3 bg-purple-50 rounded-xl p-5 border border-purple-100">
+                <span className="w-7 h-7 bg-purple-200 text-purple-900 rounded-full flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">
                   {i + 1}
                 </span>
-                <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
+                <span className="text-gray-700 text-lg leading-relaxed">{item}</span>
               </div>
             ))}
           </div>
@@ -169,14 +174,13 @@ export default function AngerManagementLandingPage() {
                 <li className="flex items-start gap-2"><span className="text-purple-400">📅</span> 6 מפגשים פרונטליים, פעם בשבוע</li>
                 <li className="flex items-start gap-2"><span className="text-purple-400">⏰</span> 3.5 שעות כל מפגש | 17:30–21:00 (עם 2 הפסקות)</li>
                 <li className="flex items-start gap-2"><span className="text-purple-400">📍</span> בצלאל 8, רמת גן (ליד תחנת ארלוזורוב/סבידור)</li>
-                <li className="flex items-start gap-2"><span className="text-purple-400">🚗</span> חניה חינם בסביבה</li>
-                <li className="flex items-start gap-2"><span className="text-purple-400">👥</span> קבוצה קטנה לאינטראקציה אישית</li>
+                <li className="flex items-start gap-2"><span className="text-purple-400">🚗</span> חניה בכחול לבן או באחד משפע החניונים בסביבה</li>
               </ul>
             </div>
             <div className="bg-white rounded-2xl border border-purple-100 p-6">
               <h3 className="font-bold text-purple-900 mb-4">מה תרוויח/י</h3>
               <ul className="space-y-3 text-gray-700">
-                {["שמחה, רוגע, שקט נפשי", "שחרור מכעסים ולחצים", "שיפור הזוגיות והתקשורת", "ביטחון, כבוד עצמי ואהבה עצמית", "שינוי שנשמר לאורך זמן", "כלים פרקטיים ליישום מיידי"].map((item) => (
+                {["שמחה, רוגע, שקט נפשי", "שחרור מכעסים, לחצים, התפרצויות זעם, תסכולים, אכזבות, טראומות ועוד", "שיפור הזוגיות והתקשורת", "ביטחון, כבוד עצמי ואהבה עצמית", "שינוי שנשמר לאורך זמן", "כלים פרקטיים ליישום מיידי"].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="text-yellow-500 font-bold mt-0.5">✓</span>
                     {item}
@@ -217,14 +221,20 @@ export default function AngerManagementLandingPage() {
             <p className="text-center text-purple-900 font-bold mt-3">המלצה חמה של חן על הסדנה לשליטה בכעסים</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {videoTestimonials.filter((t) => t.name !== "חן").map((t, i) => (
-              <div key={i} className="bg-purple-50 rounded-2xl p-6 border border-purple-100 text-center">
-                <div className="w-12 h-12 bg-purple-200 text-purple-800 rounded-full flex items-center justify-center text-xl mx-auto mb-3">
-                  🎥
+          <p className="text-center text-gray-600 mb-6">הודעות WhatsApp אמיתיות מבוגרי הסדנה 💬</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {waTestimonials.map((t, i) => (
+              <div key={i} className="bg-purple-50 rounded-2xl p-4 border border-purple-100">
+                <div className="rounded-xl overflow-hidden bg-white shadow-sm">
+                  <Image
+                    src={t.image}
+                    alt={`המלצה של ${t.name} בוואטסאפ`}
+                    width={720}
+                    height={1280}
+                    className="w-full h-auto"
+                  />
                 </div>
-                <p className="font-bold text-purple-900">{t.name}</p>
-                <p className="text-gray-600 text-sm mt-1">{t.note}</p>
+                <p className="font-bold text-purple-900 text-center mt-3">{t.name}</p>
               </div>
             ))}
           </div>

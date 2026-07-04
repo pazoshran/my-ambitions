@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import { courseTestimonials } from "@/data/courseTestimonials";
 import type { Metadata } from "next";
+
+const coursePhotos = ["/images/27729_217.jpg", "/images/27729_218.jpg", "/images/27729_267.jpg"];
 
 export const metadata: Metadata = {
   title: "קורס NLP | מכללת אמביציות - עדנה מימון",
@@ -84,8 +87,8 @@ export default function NLPCoursePage() {
                 <li className="flex items-start gap-2"><span className="text-purple-400">📅</span> 17 מפגשים, אחד לשבוע</li>
                 <li className="flex items-start gap-2"><span className="text-purple-400">⏰</span> 4 שעות כל מפגש</li>
                 <li className="flex items-start gap-2"><span className="text-purple-400">🎓</span> 54 שעות אקדמיות</li>
-                <li className="flex items-start gap-2"><span className="text-purple-400">📍</span> בית רגב קפיטל, בצלאל 4, רמת גן (קרקע)</li>
-                <li className="flex items-start gap-2"><span className="text-purple-400">🚗</span> חניה חינם בבניין</li>
+                <li className="flex items-start gap-2"><span className="text-purple-400">📍</span> בצלאל 8, רמת גן, ממש קרוב לתחנת רכבת סבידור מרכז</li>
+                <li className="flex items-start gap-2"><span className="text-purple-400">🚗</span> חניה בכחול לבן או באחד משפע החניונים בסביבה</li>
                 <li className="flex items-start gap-2"><span className="text-purple-400">📜</span> 2 נקודות זכות ממשרד החינוך</li>
               </ul>
             </div>
@@ -127,6 +130,41 @@ export default function NLPCoursePage() {
                 <div key={t} className="text-center bg-purple-50 rounded-lg py-2 px-3 text-sm text-purple-800 font-medium">{t}</div>
               ))}
             </div>
+          </div>
+
+          {/* Photos */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-purple-900 mb-6">תמונות מתוך הקורס</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {coursePhotos.map((src) => (
+                <div key={src} className="rounded-2xl overflow-hidden shadow-sm">
+                  <Image src={src} alt="מתוך קורס NLP" width={480} height={320} className="w-full h-48 object-cover" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Testimonials */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-purple-900 mb-6">המלצות בוגרי הקורס</h2>
+            <div className="columns-1 md:columns-2 gap-6">
+              {courseTestimonials.map((t, i) => (
+                <div key={i} className="bg-purple-50 rounded-2xl border border-purple-100 p-6 mb-6 break-inside-avoid">
+                  <div className="text-yellow-500 text-2xl mb-3">❝</div>
+                  <p className="text-gray-700 leading-relaxed text-sm mb-4">{t.text}</p>
+                  <p className="font-bold text-purple-900 text-sm">— {t.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Practitioner upsell */}
+          <div className="bg-purple-50 border border-purple-100 rounded-3xl p-8 text-center mb-12">
+            <h3 className="text-xl font-bold text-purple-900 mb-2">רוצים להעמיק? קורס NLP Practitioner</h3>
+            <p className="text-gray-600 mb-5">קורס מקצועי ויוקרתי של 145 שעות אקדמיות, 3 תעודות וכלים מתקדמים</p>
+            <Link href="/courses/nlp-practitioner" className="inline-block bg-purple-800 hover:bg-purple-700 text-white font-bold px-6 py-2 rounded-full transition-colors">
+              לקורס NLP Practitioner ←
+            </Link>
           </div>
 
           {/* CTA */}

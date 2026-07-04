@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/about", label: "מי אנחנו" },
   { href: "/workshops", label: "סדנאות" },
   { href: "/courses/nlp", label: "קורס NLP" },
+  { href: "/courses/nlp-practitioner", label: "NLP Practitioner" },
   { href: "/coaching", label: "אימון אישי" },
   { href: "/articles", label: "מאמרים" },
   { href: "/testimonials", label: "המלצות" },
@@ -41,7 +42,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+              className={`px-3 py-1.5 rounded-md text-sm font-bold transition-colors ${
                 pathname === link.href
                   ? "bg-purple-100 text-purple-900"
                   : "text-gray-600 hover:text-purple-900 hover:bg-purple-50"
@@ -79,7 +80,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+              className={`block px-3 py-2 rounded-md text-sm font-bold transition-colors ${
                 pathname === link.href
                   ? "bg-purple-100 text-purple-900"
                   : "text-gray-600 hover:text-purple-900 hover:bg-purple-50"

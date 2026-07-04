@@ -85,15 +85,13 @@ export default function HomePage() {
               />
             </div>
             <div className="text-center md:text-right">
-              <p className="text-2xl text-purple-800 font-medium leading-relaxed mb-4">
-                &quot;חברים וחברות יקרים, אני כאן בשבילכם. באהבה אמיתית 💜&quot;
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                אתר זה מוקדש לאנשים שחווים קשיים במערכות יחסים: בזוגיות, במשפחה, עם הילדים,
+                בעבודה, ובעיקר עם עצמם. הכלים שתקבלו מאיתנו הם עוצמתיים, כי הם עובדים עם
+                תת המודע, כדי ליצור שינויים אמיתיים מהשורש.
               </p>
-              <p className="text-gray-500 mb-4">— עדנה מימון</p>
-              <p className="text-gray-700 leading-relaxed">
-                אתר זה מוקדש לאנשים הרוצים לשפר את חייהם, להיות מאושרים ולקבל
-                כלים להעצמה אישית — שיפור מערכות יחסים, ביטחון עצמי, שליטה
-                ברגשות ועוד.
-              </p>
+              <p className="text-xl text-purple-800 font-medium">באהבה אמיתית,</p>
+              <p className="text-gray-500">עדנה מימון 💜</p>
             </div>
           </div>
         </div>
@@ -194,7 +192,7 @@ export default function HomePage() {
               <div className="p-8 text-white" style={{ background: "linear-gradient(135deg, #1A1A2E, #2D2D4E)" }}>
                 <h3 className="text-2xl font-bold mb-3">אימון אישי</h3>
                 <p className="text-white/85 leading-relaxed mb-4">
-                  פגישות 1:1 אישיות עם עדנה. תוכנית מותאמת אישית לצרכים שלך — פחדים, חרדות, קריירה, זוגיות ועוד.
+                  פגישות 1:1 אישיות עם עדנה מימון. תוכנית מותאמת אישית לצרכים שלך — כעסים, התפרצויות זעם, טראומות, פוסט טראומה, פחדים, חרדות, קריירה, זוגיות ועוד.
                 </p>
                 <Link href="/coaching" className="inline-block bg-white text-gray-900 font-bold px-6 py-2 rounded-full hover:bg-yellow-300 transition-colors">
                   לפרטי האימון
