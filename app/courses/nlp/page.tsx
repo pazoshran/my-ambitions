@@ -43,13 +43,13 @@ export default function NLPCoursePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative py-16 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #3D1E60, #5B2D8E)" }}>
+      <section className="relative py-16 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #2E1650, #5B2D8E)" }}>
         <div className="absolute inset-0">
           <Image src="/images/27729_288.jpg" alt="" fill className="object-cover opacity-20" />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="text-6xl mb-4">🌟</div>
-          <h1 className="text-4xl font-bold mb-4">קורס NLP</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">קורס NLP</h1>
           <p className="text-white/80 text-xl">&quot;כישורים לחיים עם ביטחון עצמי&quot;</p>
           <div className="flex flex-wrap gap-3 justify-center mt-6">
             <span className="bg-white/15 text-white rounded-full px-4 py-1 text-sm">17 מפגשים</span>

@@ -29,7 +29,7 @@ export default function CoachingPage() {
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="text-6xl mb-4">🎯</div>
-          <h1 className="text-4xl font-bold mb-4">אימון אישי</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">אימון אישי</h1>
           <p className="text-white/80 text-xl">מהו אימון אישי?</p>
         </div>
       </section>

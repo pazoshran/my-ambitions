@@ -59,7 +59,7 @@ export default function NLPPractitionerPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative py-20 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #3D1E60, #5B2D8E)" }}>
+      <section className="relative py-20 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #2E1650, #5B2D8E)" }}>
         <div className="absolute inset-0">
           <Image src="/images/27729_217.jpg" alt="" fill className="object-cover opacity-15" priority />
         </div>
@@ -73,7 +73,7 @@ export default function NLPPractitionerPage() {
             <span className="bg-white/15 rounded-full px-4 py-1 text-sm">קרן השתלמות / שבתון</span>
           </div>
           <div className="mt-8">
-            <a href="#lead-form" className="inline-block bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors text-lg">
+            <a href="#lead-form" className="inline-block btn btn-gold text-lg">
               השאירו פרטים
             </a>
           </div>

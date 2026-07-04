@@ -49,7 +49,7 @@ export default function AngerManagementLandingPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative py-14 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #3D1E60, #5B2D8E)" }}>
+      <section className="relative py-14 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #2E1650, #5B2D8E)" }}>
         <div className="absolute inset-0">
           <Image src="/images/27729_306.jpg" alt="" fill className="object-cover opacity-15" />
         </div>
@@ -110,7 +110,7 @@ export default function AngerManagementLandingPage() {
         <div className="max-w-xl mx-auto">
           <p className="text-white text-xl font-bold mb-4">מוכן/ה לשינוי אמיתי? השאר/י פרטים עכשיו!</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="#lead-form" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors">
+            <a href="#lead-form" className="btn btn-gold">
               השאר/י פרטים
             </a>
           </div>

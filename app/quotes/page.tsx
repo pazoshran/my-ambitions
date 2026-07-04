@@ -17,9 +17,9 @@ const featuredImages = [
 export default function QuotesPage() {
   return (
     <div>
-      <section className="py-16 px-4 text-white" style={{ background: "linear-gradient(135deg, #3D1E60, #5B2D8E)" }}>
+      <section className="py-20 px-4 text-white" style={{ background: "linear-gradient(135deg, #2E1650, #5B2D8E)" }}>
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-4">ציטוטים / משפטי העצמה</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">ציטוטים / משפטי העצמה</h1>
           <p className="text-white/80 text-xl">השראה, מוטיבציה וחוכמת חיים</p>
         </div>
       </section>

@@ -44,7 +44,7 @@ export default async function ArticlePage({
   return (
     <div>
       {/* Header */}
-      <section className="py-14 px-4 text-white" style={{ background: "linear-gradient(135deg, #3D1E60, #5B2D8E)" }}>
+      <section className="py-14 px-4 text-white" style={{ background: "linear-gradient(135deg, #2E1650, #5B2D8E)" }}>
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-2 text-white/60 text-sm mb-4">
             <Link href="/" className="hover:text-white transition-colors">דף הבית</Link>

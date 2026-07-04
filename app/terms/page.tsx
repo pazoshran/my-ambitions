@@ -10,7 +10,7 @@ export default function TermsPage() {
     <div>
       <section className="py-16 px-4 text-white" style={{ background: "linear-gradient(135deg, #1A1A2E, #3D1E60)" }}>
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-4">תנאי שימוש</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">תנאי שימוש</h1>
           <p className="text-white/70">עדכון אחרון: 2025</p>
         </div>
       </section>

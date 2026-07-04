@@ -39,9 +39,9 @@ export default function AboutPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="py-16 px-4 text-white" style={{ background: "linear-gradient(135deg, #3D1E60, #5B2D8E)" }}>
+      <section className="py-20 px-4 text-white" style={{ background: "linear-gradient(135deg, #2E1650, #5B2D8E)" }}>
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-4">מי אנחנו</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">מי אנחנו</h1>
           <p className="text-white/80 text-xl">מכללת אמביציות — עדנה מימון</p>
         </div>
       </section>

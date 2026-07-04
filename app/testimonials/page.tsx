@@ -25,9 +25,9 @@ const waImages = [
 export default function TestimonialsPage() {
   return (
     <div>
-      <section className="py-16 px-4 text-white" style={{ background: "linear-gradient(135deg, #3D1E60, #5B2D8E)" }}>
+      <section className="py-20 px-4 text-white" style={{ background: "linear-gradient(135deg, #2E1650, #5B2D8E)" }}>
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-4">המלצות</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">המלצות</h1>
           <p className="text-white/80 text-xl">מה אומרים משתתפי הסדנאות, הקורסים והאימון האישי</p>
         </div>
       </section>
@@ -79,10 +79,10 @@ export default function TestimonialsPage() {
           <h2 className="text-2xl font-bold text-purple-900 mb-4">רוצים גם אתם להצטרף?</h2>
           <p className="text-gray-600 mb-6">הצטרפו לאחת הסדנאות או לאימון אישי ותרגישו את השינוי בעצמכם</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/contact" className="bg-purple-800 hover:bg-purple-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+            <a href="/contact" className="btn btn-primary">
               צרו קשר
             </a>
-            <a href="/workshops" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors">
+            <a href="/workshops" className="btn btn-gold">
               לסדנאות
             </a>
           </div>

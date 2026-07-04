@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 export default function WorkshopsPage() {
   return (
     <div>
-      <section className="relative py-16 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #3D1E60, #5B2D8E)" }}>
+      <section className="relative py-16 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #2E1650, #5B2D8E)" }}>
         <div className="absolute inset-0">
           <Image src="/images/27729_195.jpg" alt="" fill className="object-cover opacity-20" />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl font-bold mb-4">הסדנאות שלנו</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">הסדנאות שלנו</h1>
           <p className="text-white/80 text-xl max-w-2xl mx-auto">
             כולן בשיטת NLP ותרפיית קו הזמן — שינוי מהיר, עמוק ומתמשך
           </p>
@@ -55,9 +55,12 @@ export default function WorkshopsPage() {
       </section>
 
       {/* What all workshops share */}
-      <section className="bg-purple-50 py-16 px-4">
+      <section className="bg-surface py-20 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-purple-900 text-center mb-10">מה משותף לכל הסדנאות?</h2>
+          <Reveal className="text-center mb-12">
+            <span className="text-gold font-bold text-sm tracking-wide">היתרונות שלנו</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary-dark mt-2">מה משותף לכל הסדנאות?</h2>
+          </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
               { icon: "🎯", title: "תוצאות מדידות", desc: "שינוי אמיתי שרואים בשטח כבר אחרי המפגש הראשון" },
@@ -66,12 +69,14 @@ export default function WorkshopsPage() {
               { icon: "📍", title: "מיקום נוח", desc: "בצלאל 8, רמת גן — ליד תחנת רכבת סבידור. חניה בכחול לבן או בשפע החניונים שבסביבה" },
               { icon: "❤️", title: "אוירה תומכת", desc: "סביבה בטוחה, חמה ואכפתית לשינוי" },
               { icon: "🔄", title: "שינוי הדרגתי", desc: "צעד אחר צעד, בקצב שלך, לתוצאות מתמשכות" },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-2xl p-6 border border-purple-100">
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-purple-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-              </div>
+            ].map((item, i) => (
+              <Reveal key={item.title} delay={(i % 2) * 80}>
+                <div className="card-hover h-full bg-white rounded-2xl p-7 border border-purple-100 shadow-[var(--shadow-soft)]">
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <h3 className="font-bold text-primary-dark text-lg mb-2">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -83,10 +88,10 @@ export default function WorkshopsPage() {
           <h2 className="text-2xl font-bold text-purple-900 mb-4">מעוניין/ת להירשם?</h2>
           <p className="text-gray-600 mb-6">צרו קשר לבירור צרכים, בדיקת התאמה ותיאום ציפיות</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="bg-purple-800 hover:bg-purple-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+            <Link href="/contact" className="btn btn-primary">
               צרו קשר
             </Link>
-            <Link href="/schedule" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors">
+            <Link href="/schedule" className="btn btn-gold">
               תאריכי סדנאות
             </Link>
           </div>
