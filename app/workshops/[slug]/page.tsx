@@ -35,9 +35,9 @@ export default async function WorkshopDetailPage({
   return (
     <div>
       {/* Hero */}
-      <section className="relative py-20 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #3D1E60, #5B2D8E)" }}>
+      <section className="relative pt-16 pb-0 px-4 text-white overflow-hidden" style={{ background: "linear-gradient(135deg, #2E1650, #5B2D8E)" }}>
         <div className="absolute inset-0">
-          <Image src={w.heroImage} alt="" fill className="object-cover opacity-15" priority />
+          <Image src={w.heroImage} alt="" fill className="object-cover opacity-[0.12]" priority />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="flex items-center gap-2 text-white/60 text-sm mb-4 justify-center">
@@ -46,15 +46,19 @@ export default async function WorkshopDetailPage({
             <Link href="/workshops" className="hover:text-white transition-colors">סדנאות</Link>
           </div>
           <div className="text-5xl mb-4">{w.icon}</div>
-          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-3">{w.title}</h1>
-          <p className="text-xl text-white/85">{w.subtitle}</p>
-          <div className="mt-8">
-            <a href="#lead-form" className="bg-yellow-400 hover:bg-yellow-300 text-purple-900 font-bold px-8 py-3 rounded-full transition-colors text-lg">
-              השאר/י פרטים
-            </a>
+          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-3">{w.title}</h1>
+          <p className="text-xl text-white/85 mb-8">{w.subtitle}</p>
+          <a href="#lead-form" className="btn btn-gold text-lg">השאר/י פרטים</a>
+
+          {/* Featured image */}
+          <div className="mt-12 -mb-16 md:-mb-20">
+            <div className="relative rounded-t-3xl overflow-hidden shadow-2xl ring-1 ring-white/20 h-56 md:h-72">
+              <Image src={w.heroImage} alt={w.title} fill className="object-cover" priority />
+            </div>
           </div>
         </div>
       </section>
+      <div className="h-16 md:h-20 bg-white" />
 
       {/* Intro */}
       <section className="py-16 px-4">

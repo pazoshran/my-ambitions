@@ -7,6 +7,7 @@ export interface Workshop {
   sessionLength: string;
   href: string;
   icon: string;
+  image: string;
 }
 
 export const workshops: Workshop[] = [
@@ -20,6 +21,7 @@ export const workshops: Workshop[] = [
     sessionLength: "3.5 שעות",
     href: "/workshops/anger-management",
     icon: "🌊",
+    image: "/images/27729_306.jpg",
   },
   {
     id: "self-confidence",
@@ -31,6 +33,7 @@ export const workshops: Workshop[] = [
     sessionLength: "3.5 שעות",
     href: "/workshops/self-confidence",
     icon: "✨",
+    image: "/images/27729_305.jpg",
   },
   {
     id: "couple-relationship",
@@ -42,6 +45,7 @@ export const workshops: Workshop[] = [
     sessionLength: "3.5 שעות",
     href: "/workshops/couple-relationship",
     icon: "💜",
+    image: "/images/27729_310.jpg",
   },
   {
     id: "interpersonal",
@@ -53,6 +57,7 @@ export const workshops: Workshop[] = [
     sessionLength: "3.5 שעות",
     href: "/workshops/interpersonal",
     icon: "🤝",
+    image: "/images/27729_308.jpg",
   },
   {
     id: "coping-change",
@@ -64,6 +69,7 @@ export const workshops: Workshop[] = [
     sessionLength: "5 שעות",
     href: "/workshops/coping-change",
     icon: "🚀",
+    image: "/images/27729_307.jpg",
   },
   {
     id: "youth-confidence",
@@ -75,6 +81,7 @@ export const workshops: Workshop[] = [
     sessionLength: "2 שעות",
     href: "/workshops/youth-confidence",
     icon: "🌟",
+    image: "/images/27729_210.jpg",
   },
 ];
 

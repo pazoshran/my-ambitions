@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { workshops } from "@/data/workshops";
+import Reveal from "@/components/Reveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -26,26 +27,28 @@ export default function WorkshopsPage() {
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {workshops.map((w) => (
-              <div key={w.id} className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-purple-800 to-purple-500" />
-                <div className="p-8">
-                  <div className="text-5xl mb-4">{w.icon}</div>
-                  <h2 className="text-2xl font-bold text-purple-900 mb-2">{w.title}</h2>
-                  <p className="text-yellow-600 font-medium mb-4">{w.subtitle}</p>
-                  <p className="text-gray-600 leading-relaxed mb-6">{w.description}</p>
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
-                    <span className="flex items-center gap-1">📅 {w.sessions} מפגשים</span>
-                    <span className="flex items-center gap-1">⏰ {w.sessionLength} כל מפגש</span>
+            {workshops.map((w, i) => (
+              <Reveal key={w.id} delay={(i % 2) * 100}>
+                <Link href={w.href} className="group card-hover flex flex-col h-full bg-white rounded-3xl border border-purple-100 shadow-[var(--shadow-soft)] overflow-hidden">
+                  <div className="img-zoom relative h-52">
+                    <Image src={w.image} alt={w.title} fill className="object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/75 via-primary-dark/10 to-transparent" />
+                    <span className="absolute top-4 right-4 text-3xl drop-shadow-lg">{w.icon}</span>
+                    <div className="absolute bottom-4 right-5 left-5">
+                      <h2 className="text-white text-2xl font-bold drop-shadow">{w.title}</h2>
+                      <p className="text-gold-light text-sm font-medium drop-shadow">{w.subtitle}</p>
+                    </div>
                   </div>
-                  <Link
-                    href={w.href}
-                    className="block text-center bg-purple-800 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-full transition-colors"
-                  >
-                    פרטים נוספים
-                  </Link>
-                </div>
-              </div>
+                  <div className="p-7 flex flex-col flex-1">
+                    <p className="text-gray-600 leading-relaxed mb-5 flex-1">{w.description}</p>
+                    <div className="flex items-center gap-4 text-sm text-muted mb-5">
+                      <span className="flex items-center gap-1">📅 {w.sessions} מפגשים</span>
+                      <span className="flex items-center gap-1">⏰ {w.sessionLength} כל מפגש</span>
+                    </div>
+                    <span className="btn btn-primary w-full">פרטים נוספים</span>
+                  </div>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>

@@ -66,7 +66,7 @@ export default function ContactForm() {
             required
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+            className="w-full bg-gray-50/70 border border-gray-200 rounded-xl px-4 py-3 text-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent focus:bg-white"
             placeholder="השם שלך"
           />
         </div>
@@ -77,7 +77,7 @@ export default function ContactForm() {
             required
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+            className="w-full bg-gray-50/70 border border-gray-200 rounded-xl px-4 py-3 text-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent focus:bg-white"
             placeholder="050-000-0000"
           />
         </div>
@@ -89,7 +89,7 @@ export default function ContactForm() {
           type="email"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+          className="w-full bg-gray-50/70 border border-gray-200 rounded-xl px-4 py-3 text-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent focus:bg-white"
           placeholder="your@email.com"
         />
       </div>
@@ -99,7 +99,7 @@ export default function ContactForm() {
         <select
           value={formData.subject}
           onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-          className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+          className="w-full bg-gray-50/70 border border-gray-200 rounded-xl px-4 py-3 text-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent focus:bg-white"
         >
           <option value="">בחר נושא...</option>
           <option value="סדנת שליטה בכעסים">סדנת שליטה בכעסים</option>
@@ -119,7 +119,7 @@ export default function ContactForm() {
           rows={5}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent resize-none"
+          className="w-full bg-gray-50/70 border border-gray-200 rounded-xl px-4 py-3 text-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent focus:bg-white resize-none"
           placeholder="כתבו כאן את שאלתכם או בקשתכם..."
         />
       </div>
