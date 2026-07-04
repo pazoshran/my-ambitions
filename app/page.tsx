@@ -4,6 +4,7 @@ import { workshops } from "@/data/workshops";
 import { testimonials } from "@/data/testimonials";
 import LeadForm from "@/components/LeadForm";
 import Reveal from "@/components/Reveal";
+import ExpandableText from "@/components/ExpandableText";
 
 const whyUsItems = [
   { icon: "/images/27729_301.png", title: "תוצאות מיידיות", desc: "שיטות NLP מביאות שינוי בפועל — כבר ממפגש ראשון" },
@@ -222,10 +223,10 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredTestimonials.map((t, i) => (
               <Reveal key={i} delay={i * 80}>
-                <div className="card-hover h-full bg-white rounded-2xl p-7 shadow-[var(--shadow-soft)] border border-purple-100">
-                  <div className="text-gold text-4xl leading-none mb-3">❝</div>
-                  <p className="text-gray-700 leading-relaxed text-sm mb-5">{t.text}</p>
-                  <div className="font-bold text-primary-dark border-t border-purple-50 pt-4">
+                <div className="card-hover h-full bg-white rounded-2xl p-8 shadow-[var(--shadow-soft)] border border-purple-100">
+                  <div className="text-gold text-4xl leading-none mb-4">❝</div>
+                  <ExpandableText text={t.text} limit={200} className="text-gray-700 leading-[1.7] mb-5" />
+                  <div className="font-bold text-primary-dark border-t border-purple-50 pt-4 mt-4">
                     {t.name}
                     {t.city && <span className="text-gray-400 font-normal text-sm"> · {t.city}</span>}
                   </div>

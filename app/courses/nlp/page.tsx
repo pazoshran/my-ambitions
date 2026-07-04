@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { courseTestimonials } from "@/data/courseTestimonials";
+import ExpandableText from "@/components/ExpandableText";
 import type { Metadata } from "next";
 
 const coursePhotos = ["/images/27729_217.jpg", "/images/27729_218.jpg", "/images/27729_267.jpg"];
@@ -151,7 +152,7 @@ export default function NLPCoursePage() {
               {courseTestimonials.map((t, i) => (
                 <div key={i} className="bg-purple-50 rounded-2xl border border-purple-100 p-6 mb-6 break-inside-avoid">
                   <div className="text-yellow-500 text-2xl mb-3">❝</div>
-                  <p className="text-gray-700 leading-relaxed text-sm mb-4">{t.text}</p>
+                  <ExpandableText text={t.text} limit={220} className="text-gray-700 leading-[1.7] mb-4" />
                   <p className="font-bold text-purple-900 text-sm">— {t.name}</p>
                 </div>
               ))}

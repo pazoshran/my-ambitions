@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { testimonials } from "@/data/testimonials";
+import ExpandableText from "@/components/ExpandableText";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -46,23 +47,23 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-purple-900 text-center mb-8">מכתבי תודה והמלצות</h2>
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
+          <h2 className="text-3xl font-bold text-purple-900 text-center mb-12">מכתבי תודה והמלצות</h2>
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-8">
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-6 break-inside-avoid"
+                className="bg-white rounded-2xl border border-gray-100 shadow-[var(--shadow-soft)] p-8 mb-8 break-inside-avoid"
               >
-                <div className="flex items-center justify-between mb-3">
-                  <div className="text-yellow-500 text-2xl">❝</div>
-                  <span className="text-xs bg-purple-100 text-purple-700 rounded-full px-2 py-0.5 font-medium">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-yellow-500 text-3xl">❝</div>
+                  <span className="text-xs bg-purple-100 text-purple-700 rounded-full px-3 py-1 font-medium">
                     {typeLabels[t.type]}
                   </span>
                 </div>
-                <p className="text-gray-700 leading-relaxed text-sm mb-4">{t.text}</p>
-                <div className="border-t border-gray-100 pt-3 font-bold text-purple-900 text-sm">
+                <ExpandableText text={t.text} limit={230} className="text-gray-700 leading-[1.7] mb-4" />
+                <div className="border-t border-gray-100 pt-4 mt-4 font-bold text-purple-900">
                   {t.name}
                   {t.city && <span className="text-gray-500 font-normal"> | {t.city}</span>}
                 </div>

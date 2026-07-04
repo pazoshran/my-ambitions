@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 import { courseTestimonials } from "@/data/courseTestimonials";
+import ExpandableText from "@/components/ExpandableText";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -209,7 +210,7 @@ export default function NLPPractitionerPage() {
             {courseTestimonials.map((t, i) => (
               <div key={i} className="bg-white rounded-2xl border border-purple-100 shadow-sm p-6 mb-6 break-inside-avoid">
                 <div className="text-yellow-500 text-2xl mb-3">❝</div>
-                <p className="text-gray-700 leading-relaxed text-sm mb-4">{t.text}</p>
+                <ExpandableText text={t.text} limit={220} className="text-gray-700 leading-[1.7] mb-4" />
                 <p className="font-bold text-purple-900 text-sm">— {t.name}</p>
               </div>
             ))}
