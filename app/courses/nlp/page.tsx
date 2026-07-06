@@ -49,8 +49,8 @@ export default function NLPCoursePage() {
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="text-6xl mb-4">🌟</div>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">קורס NLP</h1>
-          <p className="text-white/80 text-xl">&quot;כישורים לחיים עם ביטחון עצמי&quot;</p>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">כישורים לחיים עם ביטחון עצמי</h1>
+          <p className="text-white/80 text-xl">בשיטת NLP</p>
           <div className="flex flex-wrap gap-3 justify-center mt-6">
             <span className="bg-white/15 text-white rounded-full px-4 py-1 text-sm">17 מפגשים</span>
             <span className="bg-white/15 text-white rounded-full px-4 py-1 text-sm">54 שעות אקדמיות</span>

@@ -16,7 +16,7 @@ const whyUsItems = [
 
 const stats = [
   { num: "18+", label: "שנות ניסיון" },
-  { num: "מאות", label: "בוגרים מרוצים" },
+  { num: "אלפיים", label: "בוגרים מרוצים" },
   { num: "NLP", label: "שיטה מוכחת" },
 ];
 
@@ -42,7 +42,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="reveal is-visible inline-flex items-center gap-2 bg-white/10 text-gold-light border border-gold/30 rounded-full px-4 py-1.5 text-sm font-medium mb-7 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-            18+ שנות ניסיון · מאות בוגרים מרוצים
+            18+ שנות ניסיון · אלפיים בוגרים מרוצים
           </div>
           <h1 className="reveal is-visible text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] mb-6" style={{ animationDelay: "80ms" }}>
             מכללת אמביציות
@@ -164,7 +164,7 @@ export default function HomePage() {
         <Image src="/images/27729_195.jpg" alt="בוגרי קורסי NLP של מכללת אמביציות" fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-primary-dark/80 to-primary/70 flex items-center justify-center px-4">
           <Reveal className="text-center text-white">
-            <p className="text-3xl md:text-4xl font-extrabold mb-2">מאות בוגרים מרוצים</p>
+            <p className="text-3xl md:text-4xl font-extrabold mb-2">אלפיים בוגרים מרוצים</p>
             <p className="text-white/85 text-lg">שינו את חייהם עם שיטת NLP של עדנה מימון</p>
           </Reveal>
         </div>
@@ -218,7 +218,7 @@ export default function HomePage() {
           <Reveal className="text-center mb-14">
             <span className="text-gold font-bold text-sm tracking-wide">המלצות</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-primary-dark mt-2 mb-3">מה אומרים המשתתפים</h2>
-            <p className="text-gray-600">מאות אנשים שינו את חייהם — הנה כמה מהם</p>
+            <p className="text-gray-600">אלפיים אנשים שינו את חייהם — הנה כמה מהם</p>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredTestimonials.map((t, i) => (

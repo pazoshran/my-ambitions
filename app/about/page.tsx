@@ -39,7 +39,7 @@ const credentials = [
 
 const metrics = [
   { num: "+18", label: "שנים של ניסיון מקצועי בשטח" },
-  { num: "מאות", label: "בוגרים ובוגרות ששינו את חייהם" },
+  { num: "אלפיים", label: "בוגרים ובוגרות ששינו את חייהם" },
   { num: "100%", label: "כלים פרקטיים ליישום מיידי מהמפגש הראשון" },
 ];
 
@@ -57,7 +57,7 @@ const values = [
   {
     icon: "🌱",
     title: "שינוי מהשורש",
-    text: "אנחנו לא מאמינים בפתרונות זמניים או ב\"פלסטרים\". העבודה המשותפת שלנו נוגעת בגרעין הרגשי ובתת-המודע, ומייצרת הרגלים חדשים לכל החיים.",
+    text: "אנחנו לא מאמינים בפתרונות זמניים או ב\"פלסטרים\". העבודה המשותפת שלנו נוגעת בגרעין הרגשי ובתת מודע, ומייצרת הרגלים חדשים לכל החיים.",
   },
 ];
 
@@ -155,7 +155,7 @@ export default function AboutPage() {
                     {v.icon}
                   </div>
                   <h3 className="text-xl font-extrabold text-primary-dark mb-3">{v.title}</h3>
-                  <p className="text-gray-600 leading-[1.75]">{v.text}</p>
+                  <p className="text-gray-600 leading-[1.75] text-lg">{v.text}</p>
                 </div>
               </Reveal>
             ))}
