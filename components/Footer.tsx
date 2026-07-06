@@ -56,10 +56,9 @@ export default function Footer() {
               {[
                 { href: "/about", label: "מי אנחנו" },
                 { href: "/workshops", label: "סדנאות" },
-                { href: "/courses/nlp", label: "קורס NLP" },
+                { href: "/courses/nlp", label: "כישורים לחיים" },
                 { href: "/coaching", label: "אימון אישי" },
                 { href: "/what-is-nlp", label: "מהי שיטת NLP" },
-                { href: "/schedule", label: "תאריכי סדנאות" },
                 { href: "/articles", label: "מאמרים" },
                 { href: "/stories", label: "סיפורים עם מוסר השכל" },
                 { href: "/videos", label: "סרטוני וידאו" },

@@ -88,11 +88,8 @@ export default function WorkshopsPage() {
           <h2 className="text-2xl font-bold text-purple-900 mb-4">מעוניין/ת להירשם?</h2>
           <p className="text-gray-600 mb-6">צרו קשר לבירור צרכים, בדיקת התאמה ותיאום ציפיות</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="btn btn-primary">
+            <Link href="/contact" className="btn btn-gold">
               צרו קשר
-            </Link>
-            <Link href="/schedule" className="btn btn-gold">
-              תאריכי סדנאות
             </Link>
           </div>
         </div>

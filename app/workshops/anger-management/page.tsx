@@ -61,9 +61,14 @@ export default function AngerManagementLandingPage() {
             סדנה שליטה בכעסים
             <span className="block text-yellow-300 mt-2">עם המומחית עדנה מימון</span>
           </h1>
-          <p className="text-lg text-white/85 max-w-2xl mx-auto leading-relaxed mb-7">
+          <p className="text-lg text-white/85 max-w-2xl mx-auto leading-relaxed mb-5">
             הסדנה שתלמד אותך איך להשתחרר מכעסים ולחצים באמצעות עבודה עם תת המודע — בשיטה הכי מהירה, מוכחת, בטוחה וטבעית, ללא כדורים!
           </p>
+
+          <div className="inline-flex items-center gap-2 bg-yellow-400 text-purple-900 font-bold rounded-full px-5 py-2 mb-7 shadow-lg">
+            <span className="text-lg">📅</span>
+            הסדנה הקרובה: 12.7.26
+          </div>
 
           {/* Intro video */}
           <div className="max-w-2xl mx-auto mb-7">
@@ -254,10 +259,8 @@ export default function AngerManagementLandingPage() {
             subtitle="מלאו את הפרטים ועדנה תחזור אליכם עם כל המידע."
             source="סדנה שליטה בכעסים"
           />
-          <div className="mt-6 text-center">
-            <a href="/schedule" className="text-purple-700 underline text-sm hover:text-purple-900 transition-colors">
-              לתאריכי הסדנה הקרובים ←
-            </a>
+          <div className="mt-6 text-center text-purple-800 font-bold">
+            📅 הסדנה הקרובה: 12.7.26
           </div>
         </div>
       </section>

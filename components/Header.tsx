@@ -9,7 +9,7 @@ const navLinks = [
   { href: "/", label: "דף הבית" },
   { href: "/about", label: "מי אנחנו" },
   { href: "/workshops", label: "סדנאות" },
-  { href: "/courses/nlp", label: "קורס NLP" },
+  { href: "/courses/nlp", label: "כישורים לחיים" },
   { href: "/courses/nlp-practitioner", label: "Practitioner" },
   { href: "/coaching", label: "אימון אישי" },
   { href: "/articles", label: "מאמרים" },
