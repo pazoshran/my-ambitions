@@ -212,18 +212,18 @@ export default function AngerManagementLandingPage() {
           <h2 className="text-2xl font-bold text-purple-900 mb-2 text-center">מה אומרים המשתתפים</h2>
           <p className="text-center text-gray-600 mb-8">המלצות מצולמות של בוגרי הסדנה לשליטה בכעסים</p>
 
-          {/* Featured video testimonial — חן */}
+          {/* Featured testimonials video */}
           <div className="mb-8">
             <div className="relative rounded-2xl overflow-hidden shadow-md" style={{ paddingTop: "56.25%" }}>
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/1dxnFxnd7zk?rel=0"
-                title="המלצה חמה של חן על הסדנה לשליטה בכעסים"
+                src="https://www.youtube.com/embed/CLw41NWSi-A?rel=0"
+                title="המלצות משתתפי הסדנה לשליטה בכעסים"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
             </div>
-            <p className="text-center text-purple-900 font-bold mt-3">המלצה חמה של חן על הסדנה לשליטה בכעסים</p>
+            <p className="text-center text-purple-900 font-bold mt-3">המלצות משתתפי הסדנה לשליטה בכעסים</p>
           </div>
 
           <p className="text-center text-gray-600 mb-6">הודעות WhatsApp אמיתיות מבוגרי הסדנה 💬</p>

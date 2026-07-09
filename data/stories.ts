@@ -4,12 +4,14 @@ export interface Story {
   excerpt: string;
   content: string;
   tags?: string[];
+  attribution?: string;
 }
 
 const storiesData = [
   {
     slug: "הגנן-וארבעת-התאומים",
     title: "הגנן וארבעת התאומים",
+    attribution: "כתבה במקור: עדנה מימון",
     excerpt: "סיפור על גנן אוהב שמגלה שצמחיו נובלים, ובדרך בלתי צפויה לומד שיעור עמוק על תקשורת, תפיסה ונקודת מבט.",
     tags: ["סיפור עם מוסר השכל", "תקשורת בינאישית", "משל"],
     content: `בגינה ירוקה ויפה בכפר קטן גדלו צמחים מסוגים שונים. כולם צמחו יפה, עם עלים בצבעים שונים ויפים. לחלקם אף היו פרחים מסוגים שונים, שהוסיפו ריח נעים ומראה צבעוני לגינה היפה והמטופחת.
@@ -248,6 +250,7 @@ const storiesData = [
   {
     slug: "התמונה-עם-העיניים",
     title: "התמונה עם העיניים",
+    attribution: "כתבה במקור: עדנה מימון",
     excerpt: "סיפורה של צללית, שנשאה כל חייה את תמונת בעלה ואת הטינה שבליבה — עד שהבינה מי באמת נפגע מהנקמה.",
     tags: ["שחרור", "סליחה", "תקשורת בינאישית"],
     content: `כתבה במקור: עדנה מימון
@@ -969,6 +972,7 @@ export const stories: Story[] = storiesData.map((s) => ({
   excerpt: s.excerpt,
   content: s.content,
   tags: s.tags ? [...s.tags] : [],
+  attribution: (s as { attribution?: string }).attribution,
 }));
 
 export function getStoryBySlug(slug: string): Story | undefined {

@@ -4,7 +4,20 @@ import { courseTestimonials } from "@/data/courseTestimonials";
 import ExpandableText from "@/components/ExpandableText";
 import type { Metadata } from "next";
 
-const coursePhotos = ["/images/27729_217.jpg", "/images/27729_218.jpg", "/images/27729_267.jpg"];
+const coursePhotos = [
+  "/images/27729_333.jpg",
+  "/images/27729_73.jpg",
+  "/images/27729_87.jpg",
+  "/images/27729_88.jpg",
+  "/images/27729_288.jpg",
+];
+const courseWhatsapp = [
+  "/images/27729_204.jpg",
+  "/images/27729_234.jpg",
+  "/images/27729_124.jpg",
+  "/images/27729_258.jpg",
+  "/images/27729_261.jpg",
+];
 
 export const metadata: Metadata = {
   title: "קורס NLP | מכללת אמביציות - עדנה מימון",
@@ -59,8 +72,23 @@ export default function NLPCoursePage() {
         </div>
       </section>
 
+      {/* Featured video */}
+      <section className="py-12 px-4">
+        <div className="max-w-3xl mx-auto">
+          <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-card)] ring-1 ring-purple-100" style={{ paddingTop: "56.25%" }}>
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/kY1t1GGdmLQ?rel=0"
+              title="כישורים לחיים עם ביטחון עצמי — קורס NLP"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Main */}
-      <section className="py-16 px-4">
+      <section className="pb-16 px-4">
         <div className="max-w-4xl mx-auto">
           {/* About */}
           <div className="bg-purple-50 rounded-3xl p-8 md:p-12 mb-10">
@@ -136,10 +164,22 @@ export default function NLPCoursePage() {
           {/* Photos */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-purple-900 mb-6">תמונות מתוך הקורס</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {coursePhotos.map((src) => (
-                <div key={src} className="rounded-2xl overflow-hidden shadow-sm">
-                  <Image src={src} alt="מתוך קורס NLP" width={480} height={320} className="w-full h-48 object-cover" />
+                <div key={src} className="rounded-2xl overflow-hidden shadow-[var(--shadow-soft)] bg-purple-50">
+                  <Image src={src} alt="מתוך קורס NLP" width={800} height={600} className="w-full h-auto" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* WhatsApp testimonials */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-purple-900 mb-6">המלצות שקיבלנו מבוגרי הקורס 💬</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+              {courseWhatsapp.map((src) => (
+                <div key={src} className="rounded-2xl overflow-hidden shadow-[var(--shadow-soft)] bg-white border border-purple-100 p-2">
+                  <Image src={src} alt="המלצה מבוגר הקורס" width={720} height={1280} className="w-full h-auto rounded-xl" />
                 </div>
               ))}
             </div>

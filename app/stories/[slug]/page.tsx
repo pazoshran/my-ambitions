@@ -65,8 +65,11 @@ export default async function StoryPage({
       {/* Content */}
       <section className="py-12 px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="bg-purple-50 rounded-2xl p-6 mb-8 text-gray-700 text-lg leading-relaxed italic">
-            {story.excerpt}
+          <div className="bg-purple-50 rounded-2xl p-6 mb-8 text-gray-700 text-lg leading-relaxed">
+            {story.attribution && (
+              <p className="font-bold text-purple-900 mb-2 not-italic">{story.attribution}</p>
+            )}
+            <span className="italic">{story.excerpt}</span>
           </div>
 
           <article className="space-y-4">

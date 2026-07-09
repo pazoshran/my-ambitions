@@ -7,16 +7,16 @@ import Reveal from "@/components/Reveal";
 import ExpandableText from "@/components/ExpandableText";
 
 const whyUsItems = [
-  { icon: "/images/27729_301.png", title: "תוצאות מיידיות", desc: "שיטות NLP מביאות שינוי בפועל — כבר ממפגש ראשון" },
-  { icon: "/images/27729_300.png", title: "עבודה עם תת המודע", desc: "שינוי עמוק ומהיר ישירות במקור — לא רק בסימפטום" },
-  { icon: "/images/27729_303.png", title: "כלים פרקטיים", desc: "טכניקות פשוטות ומעשיות שניתן ליישם מיד בחיים האמיתיים" },
-  { icon: "/images/27729_311.png", title: "מסע אישי", desc: "כל אדם מקבל התייחסות אישית ותוכנית המותאמת לו" },
+  { icon: "/images/27729_301.png", title: "תוצאות תוך זמן קצר", desc: "בזכות הטכניקות החדשות לשינויים במוח" },
+  { icon: "/images/27729_300.png", title: "עבודה עם תת מודע", desc: "במקום לטפל בסימפטום, מטפלים בגורם לתגובות אימפולסיביות" },
+  { icon: "/images/27729_303.png", title: "כלים פרקטיים", desc: "טכניקות פשוטות ומעשיות שניתן ליישם מיד בחיים האמיתיים. לכל התנהגות לא רצויה, יש טכניקה מתאימה לשינוי אמיתי" },
+  { icon: "/images/27729_311.png", title: "מסע אישי", desc: "כל אדם מקבל התייחסות אישית ובדיקת התקדמות בכל שיעור" },
   { icon: "/images/27729_314.png", title: "ניסיון ומקצועיות", desc: "18+ שנות ניסיון, תעודות מהמומחים הגדולים בעולם" },
 ];
 
 const stats = [
   { num: "18+", label: "שנות ניסיון" },
-  { num: "אלפיים", label: "בוגרים מרוצים" },
+  { num: "אלפי", label: "בוגרים מרוצים" },
   { num: "NLP", label: "שיטה מוכחת" },
 ];
 
@@ -42,7 +42,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="reveal is-visible inline-flex items-center gap-2 bg-white/10 text-gold-light border border-gold/30 rounded-full px-4 py-1.5 text-sm font-medium mb-7 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-            18+ שנות ניסיון · אלפיים בוגרים מרוצים
+            18+ שנות ניסיון · אלפי בוגרים מרוצים
           </div>
           <h1 className="reveal is-visible text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] mb-6" style={{ animationDelay: "80ms" }}>
             מכללת אמביציות
@@ -114,8 +114,8 @@ export default function HomePage() {
                   <div className="w-16 h-16 mb-4">
                     <Image src={item.icon} alt="" width={64} height={64} className="w-full h-full" />
                   </div>
-                  <h3 className="text-primary-dark font-bold text-lg mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="text-primary-dark font-bold text-xl mb-2">{item.title}</h3>
+                  <p className="text-gray-600 text-lg leading-relaxed">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -164,7 +164,7 @@ export default function HomePage() {
         <Image src="/images/27729_195.jpg" alt="בוגרי קורסי NLP של מכללת אמביציות" fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-primary-dark/80 to-primary/70 flex items-center justify-center px-4">
           <Reveal className="text-center text-white">
-            <p className="text-3xl md:text-4xl font-extrabold mb-2">אלפיים בוגרים מרוצים</p>
+            <p className="text-3xl md:text-4xl font-extrabold mb-2">אלפי בוגרים מרוצים</p>
             <p className="text-white/85 text-lg">שינו את חייהם עם שיטת NLP של עדנה מימון</p>
           </Reveal>
         </div>
@@ -202,7 +202,7 @@ export default function HomePage() {
                 <div className="p-8 text-white" style={{ background: "linear-gradient(135deg, #1A1A2E, #2D2D4E)" }}>
                   <h3 className="text-2xl font-bold mb-3">אימון אישי</h3>
                   <p className="text-white/85 leading-relaxed mb-5">
-                    פגישות 1:1 אישיות עם עדנה מימון. תוכנית מותאמת אישית — כעסים, התפרצויות זעם, טראומות, פוסט טראומה, פחדים, חרדות, קריירה, זוגיות ועוד.
+                    פגישות 1:1 אישיות עם עדנה מימון. תכנית מותאמת אישית — כעסים, התפרצויות זעם, טראומות, פוסט טראומה, פחדים, חרדות, קריירה, זוגיות ועוד.
                   </p>
                   <Link href="/coaching" className="btn btn-gold !py-2.5">לפרטי האימון</Link>
                 </div>
@@ -218,7 +218,7 @@ export default function HomePage() {
           <Reveal className="text-center mb-14">
             <span className="text-gold font-bold text-sm tracking-wide">המלצות</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-primary-dark mt-2 mb-3">מה אומרים המשתתפים</h2>
-            <p className="text-gray-600">אלפיים אנשים שינו את חייהם — הנה כמה מהם</p>
+            <p className="text-gray-600">אלפי אנשים שינו את חייהם — הנה כמה מהם</p>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredTestimonials.map((t, i) => (
@@ -245,7 +245,7 @@ export default function HomePage() {
         <Reveal className="max-w-xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-extrabold text-primary-dark mb-2">רוצים לשמוע עוד?</h2>
-            <p className="text-gray-600">השאירו פרטים ועדנה תחזור אליכם עם כל המידע.</p>
+            <p className="text-gray-600">השאירו פרטים ויחזרו אליכם עם כל המידע.</p>
           </div>
           <LeadForm
             title="השאירו פרטים ונחזור אליכם"

@@ -9,10 +9,11 @@ const navLinks = [
   { href: "/", label: "דף הבית" },
   { href: "/about", label: "מי אנחנו" },
   { href: "/workshops", label: "סדנאות" },
-  { href: "/courses/nlp", label: "כישורים לחיים" },
+  { href: "/courses/nlp", label: "כישורים לחיים עם ביטחון עצמי" },
   { href: "/courses/nlp-practitioner", label: "Practitioner" },
   { href: "/coaching", label: "אימון אישי" },
   { href: "/articles", label: "מאמרים" },
+  { href: "/stories", label: "סיפורים עם מוסר השכל" },
   { href: "/testimonials", label: "המלצות" },
 ];
 
@@ -36,7 +37,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-0.5">
+        <nav className="hidden xl:flex items-center gap-0.5">
           {navLinks.map((link) => {
             const active = pathname === link.href;
             return (
@@ -67,7 +68,7 @@ export default function Header() {
             צרו קשר
           </Link>
           <button
-            className="lg:hidden text-purple-900 p-1.5 -mr-1"
+            className="xl:hidden text-purple-900 p-1.5 -mr-1"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="תפריט"
             aria-expanded={menuOpen}
@@ -87,7 +88,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-white border-t border-purple-100 px-4 py-3 space-y-1 animate-[fadeInUp_0.25s_ease-out]">
+        <div className="xl:hidden bg-white border-t border-purple-100 px-4 py-3 space-y-1 animate-[fadeInUp_0.25s_ease-out]">
           {[...navLinks, { href: "/contact", label: "צור קשר" }].map((link) => (
             <Link
               key={link.href}

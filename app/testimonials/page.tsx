@@ -22,6 +22,16 @@ const waImages = [
   "/images/27729_208.jpg",
 ];
 
+// Cohort photos from workshops & courses
+const cohortPhotos = [
+  "/images/27729_130.jpg",
+  "/images/27729_273.jpg",
+  "/images/27729_225.jpg",
+  "/images/27729_275.jpg",
+  "/images/27729_286.jpg",
+  "/images/27729_295.jpg",
+];
+
 export default function TestimonialsPage() {
   return (
     <div>
@@ -47,7 +57,22 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      <section className="py-20 px-4">
+      {/* Cohort photos */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-purple-900 text-center mb-2">מחזורי הסדנאות והקורסים שלנו 📸</h2>
+          <p className="text-center text-gray-600 mb-8">רגעים מתוך המפגשים — קבוצות מלאות אנרגיה ושינוי</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {cohortPhotos.map((src) => (
+              <div key={src} className="rounded-2xl overflow-hidden shadow-[var(--shadow-soft)] bg-purple-50">
+                <Image src={src} alt="מחזור סדנה במכללת אמביציות" width={800} height={480} className="w-full h-auto" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-surface">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-purple-900 text-center mb-12">מכתבי תודה והמלצות</h2>
           <div className="columns-1 md:columns-2 lg:columns-3 gap-8">
