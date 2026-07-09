@@ -53,7 +53,17 @@ const bonuses = [
   "חוברת עשירה בחומר וטכניקות — צעד אחר צעד",
 ];
 
-const coursePhotos = ["/images/27729_217.jpg", "/images/27729_218.jpg", "/images/27729_250.jpg", "/images/27729_251.jpg", "/images/27729_267.jpg"];
+const coursePhotos = [
+  "/images/27729_269.jpg",
+  "/images/27729_257.jpg",
+  "/images/27729_217.jpg",
+  "/images/27729_76.jpg",
+  "/images/27729_52.jpg",
+  "/images/27729_218.jpg",
+  "/images/27729_250.jpg",
+  "/images/27729_251.jpg",
+  "/images/27729_267.jpg",
+];
 
 export default function NLPPractitionerPage() {
   return (
@@ -143,10 +153,10 @@ export default function NLPPractitionerPage() {
       <section className="py-12 px-4 bg-purple-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-purple-900 text-center mb-8">תמונות מתוך הקורס</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {coursePhotos.map((src) => (
-              <div key={src} className="rounded-2xl overflow-hidden shadow-sm">
-                <Image src={src} alt="מתוך קורס NLP Practitioner" width={480} height={320} className="w-full h-48 object-cover" />
+              <div key={src} className="rounded-2xl overflow-hidden shadow-[var(--shadow-soft)] bg-white">
+                <Image src={src} alt="מתוך קורס NLP Practitioner" width={800} height={600} className="w-full h-auto" />
               </div>
             ))}
           </div>
